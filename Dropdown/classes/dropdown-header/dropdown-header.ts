@@ -4,12 +4,10 @@ export class DropdownHeader extends LitElement{
     @property({type: String}) text;
     @property({type: Number}) size;
     @property({type: Boolean}) arrowDirection;
-    @property({type: Boolean}) clicked;
     constructor(){
         super();
         this.text = "Dropdown";
         this.size = 25;
-        this.clicked = false;
         this.arrowDirection = true;
     }
     static get styles(){
@@ -57,13 +55,8 @@ export class DropdownHeader extends LitElement{
             <p class="box-text">${this.text} <a class = "${this.arrowDirection ? `arrow down`: `arrow up`}"></a></p>
         </div>`;
       }
-    changeArrowDirection(){
-        this.arrowDirection = !this.arrowDirection;
-        this.render();
-    }
     handleClick(){
-        this.changeArrowDirection();
-        this.clicked = !this.clicked;
+        this.arrowDirection = !this.arrowDirection;
     }
 
 }

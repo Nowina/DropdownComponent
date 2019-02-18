@@ -10,7 +10,6 @@ let DropdownHeader = class DropdownHeader extends LitElement {
         super();
         this.text = "Dropdown";
         this.size = 25;
-        this.clicked = false;
         this.arrowDirection = true;
     }
     static get styles() {
@@ -58,13 +57,8 @@ let DropdownHeader = class DropdownHeader extends LitElement {
             <p class="box-text">${this.text} <a class = "${this.arrowDirection ? `arrow down` : `arrow up`}"></a></p>
         </div>`;
     }
-    changeArrowDirection() {
-        this.arrowDirection = !this.arrowDirection;
-        this.render();
-    }
     handleClick() {
-        this.changeArrowDirection();
-        this.clicked = !this.clicked;
+        this.arrowDirection = !this.arrowDirection;
     }
 };
 __decorate([
@@ -76,9 +70,6 @@ __decorate([
 __decorate([
     property({ type: Boolean })
 ], DropdownHeader.prototype, "arrowDirection", void 0);
-__decorate([
-    property({ type: Boolean })
-], DropdownHeader.prototype, "clicked", void 0);
 DropdownHeader = __decorate([
     customElement('dropdown-header')
 ], DropdownHeader);
