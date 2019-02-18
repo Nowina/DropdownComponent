@@ -3,7 +3,6 @@ import { LitElement, html, css, customElement, property} from '../../../node_mod
 export class DropdownElement extends LitElement{
   @property({type: String}) text;
   @property({type: Number}) size;
-  // @property({type: Boolean}) visibility;
   constructor(){
     super();
     this.text = "Link 1"

@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html, css, customElement, property } from '../../../node_modules/lit-element/lit-element';
 let DropdownElement = class DropdownElement extends LitElement {
-    // @property({type: Boolean}) visibility;
     constructor() {
         super();
         this.text = "Link 1";

@@ -18,7 +18,7 @@ export class Dropdown extends LitElement {
  
     render(){
         return html`
-            <dropdown-header @click = "${this.handleClick}" text="${this.headerText}" size="${this.size}" ></dropdown-header>
+            <dropdown-header @click ="${this.handleClick}" text="${this.headerText}" size="${this.size}"></dropdown-header>
             ${this.elements.map(
                 item => {
                     return html`<dropdown-element text="${item}" size="${this.size}" 

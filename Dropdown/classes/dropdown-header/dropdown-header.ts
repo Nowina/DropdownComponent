@@ -40,7 +40,7 @@ export class DropdownHeader extends LitElement{
                 transform: rotate(45deg);
                 -webkit-transform: rotate(45deg);
             }
-            .up {
+            .up{
                 transform: rotate(-135deg);
                -webkit-transform: rotate(-135deg);
             }
