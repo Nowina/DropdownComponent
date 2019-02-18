@@ -6,9 +6,9 @@ export class DropdownElement extends LitElement{
   @property({type: Boolean}) visibility;
   constructor(){
     super();
-    this.text = "Hello world again";
+    this.text = "Link 1"
     this.size = 25;
-    this.visibility = true;
+    this.visibility = false;
   }
   static get styles(){
     return css`

@@ -65,7 +65,6 @@ let DropdownHeader = class DropdownHeader extends LitElement {
     handleClick() {
         this.changeArrowDirection();
         this.clicked = !this.clicked;
-        console.log(this.clicked);
     }
 };
 __decorate([

@@ -8,9 +8,9 @@ import { LitElement, html, css, customElement, property } from '../../../node_mo
 let DropdownElement = class DropdownElement extends LitElement {
     constructor() {
         super();
-        this.text = "Hello world again";
+        this.text = "Link 1";
         this.size = 25;
-        this.visibility = true;
+        this.visibility = false;
     }
     static get styles() {
         return css `

@@ -64,7 +64,6 @@ export class DropdownHeader extends LitElement{
     handleClick(){
         this.changeArrowDirection();
         this.clicked = !this.clicked;
-        console.log(this.clicked); 
     }
 
 }
