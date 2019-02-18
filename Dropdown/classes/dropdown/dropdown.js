@@ -1,26 +1,20 @@
-// import { DropdownElement } from './dropdown-element/dropdown-element';
-// import { DropdownElementMain } from './dropdown-main/dropdown-main';
-import { LitElement } from 'lit-element';
-
+import { LitElement } from '../../../node_modules/lit-element/lit-element';
 class Dropdown extends LitElement {
-    // elements: Array<DropdownElement>;
-    // mainElement: DropdownElementMain;
-    // childsVisibility: boolean;
-    constructor(){
+    constructor() {
         super();
         this.childsVisibility = false;
     }
-    static get properties(){
+    static get properties() {
         return {
-            elements: {type: Array},
-            childsVisibility: {type: Boolean}, //defines whether drowdown is opened or not
-            childs: {type: Array}
+            elements: { type: Array },
+            childsVisibility: { type: Boolean },
+            childs: { type: Array }
         };
     }
-    addElement(){
-        
+    addElement() {
     }
-    render(){
+    render() {
         return;
     }
 }
+//# sourceMappingURL=dropdown.js.map

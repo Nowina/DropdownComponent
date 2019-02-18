@@ -1,24 +1,19 @@
-import { LitElement, html, css} from 'lit-element';
-
-export class DropdownElement extends LitElement{
-  // text: string;
-  // size: number;
-  // visibility: boolean;
-  constructor(){
-    super();
-    this.text = "Hello world again";
-    this.size = 25;
-    this.visibility = true;
-  }
-  static get properties(){
-    return {
-      text: {type: String},
-      size: {type: Number},
-      visibility: {type: Boolean}
-    };
-  }
-  static get styles(){
-    return css`
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { LitElement, html, css, customElement, property } from '../../../node_modules/lit-element/lit-element';
+let DropdownElement = class DropdownElement extends LitElement {
+    constructor() {
+        super();
+        this.text = "Hello world again";
+        this.size = 25;
+        this.visibility = true;
+    }
+    static get styles() {
+        return css `
       .box-text{
         margin: 2px;
         font-size: 1em;
@@ -40,14 +35,27 @@ export class DropdownElement extends LitElement{
         border-width: 1px;
       }
     `;
-  }
-  render(){
-    return html`
-    <div class="element" style = "height: ${this.size}px; width: ${this.size*6}px; 
-     ${this.visibility ? 
-      `visibility: visible` : `visibility: hidden`}" >
+    }
+    render() {
+        return html `
+    <div class="element" style = "height: ${this.size}px; width: ${this.size * 6}px; 
+     ${this.visibility ?
+            `visibility: visible` : `visibility: hidden`}" >
       <p class="box-text">${this.text}</p>
     </div>`;
-  }
-}
-customElements.define('dropdown-element', DropdownElement);
+    }
+};
+__decorate([
+    property({ type: String })
+], DropdownElement.prototype, "text", void 0);
+__decorate([
+    property({ type: Number })
+], DropdownElement.prototype, "size", void 0);
+__decorate([
+    property({ type: Boolean })
+], DropdownElement.prototype, "visibility", void 0);
+DropdownElement = __decorate([
+    customElement('dropdown-element')
+], DropdownElement);
+export { DropdownElement };
+//# sourceMappingURL=dropdown-element.js.map
