@@ -1,0 +1,14 @@
+{
+  "name": "dropdown-webcomponent",
+  "version": "3.0.0-pre.12",
+  "flat": true,
+  "main": "index.html",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0-pre.12",
+    "@webcomponents/webcomponentsjs": "^1.0.20",
+    "lit-element": "^2.0.1"
+  },
+  "resolutions": {
+    "@webcomponents/webcomponentsjs": "1.0.20"
+  }
+}
