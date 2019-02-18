@@ -34,6 +34,7 @@ export class DropdownHeader extends LitElement{
                 border-width: 0 3px 3px 0;
                 display: inline-block;
                 padding: 2px;
+                margin-left: 4px;
             }
             .down{
                 transform: rotate(45deg);
@@ -51,7 +52,7 @@ export class DropdownHeader extends LitElement{
     }
     render(){
         return html`
-        <div @click = "${this.handleClick}" class="element" style = "height: ${this.size}px; width: ${this.size*6 + 25}px;">
+        <div @click = "${this.handleClick}" class="element" style = "height: ${this.size}px; width: ${this.size*6 + 10}px;">
             <p class="box-text">${this.text} <a class = "${this.arrowDirection ? `arrow down`: `arrow up`}"></a></p>
         </div>`;
       }

@@ -6,17 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, customElement, property, html } from '../../../node_modules/lit-element/lit-element';
 import '../dropdown-header/dropdown-header.js';
+import '../dropdown-element/dropdown-element.js';
 let Dropdown = class Dropdown extends LitElement {
     constructor() {
         super();
         this.size = 25;
         this.headerText = "Dropdown";
-        this.elements = ["Link1", "Link2"];
         this.childsVisibility = false;
     }
     render() {
         return html `
             <dropdown-header @click = "${this.handleClick}" text="${this.headerText}" size="${this.size}" ></dropdown-header>
+            ${this.elements.map(item => {
+            return html `<dropdown-element text="${item}" size="${this.size}" 
+                    style="${this.childsVisibility ? `visibility: visible` : `visibility: hidden`}"> </dropdown-element>`;
+        })}
         `;
     }
     handleClick() {
@@ -33,6 +37,9 @@ __decorate([
 __decorate([
     property({ type: String })
 ], Dropdown.prototype, "headerText", void 0);
+__decorate([
+    property({ type: Boolean })
+], Dropdown.prototype, "childsVisibility", void 0);
 Dropdown = __decorate([
     customElement('custom-dropdown')
 ], Dropdown);
